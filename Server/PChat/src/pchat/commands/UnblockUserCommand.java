@@ -5,6 +5,11 @@
  */
 package pchat.commands;
 
+import java.net.Socket;
+import pchat.client.ClientHandler;
+import pchat.data.object.DataObject;
+import pchat.handler.Responder;
+
 /**
  *
  * @author Shaw Nam

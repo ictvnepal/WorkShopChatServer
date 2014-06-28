@@ -6,7 +6,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="pchat.framework.models.*" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,15 +29,6 @@
       <input type="submit" name="submit" value="Register"/>
     </form>
         
-        <%
-            try{
-            UserList list=User.getAll();
-            
-            out.println(list);
-            }catch(Exception e)
-            {
-                out.println(e.getMessage());
-            }
-        %>
+
     </body>
 </html>

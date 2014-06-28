@@ -6,6 +6,15 @@
 
 package pchat.commands;
 
+import java.io.IOException;
+import java.net.Socket;
+import java.util.Enumeration;
+import pchat.client.Client;
+import pchat.client.ClientHandler;
+import pchat.data.object.CommandType;
+import pchat.data.object.DataObject;
+import pchat.handler.Responder;
+
 /**
  *
  * @author Shaw Nam
@@ -16,7 +25,7 @@ public class KickOutCommand extends AbstractCommand {
         Socket clientSocket=null;
         ClientHandler clientHandler = ClientHandler.getInstance();
         Enumeration e = clientHandler.getClients(clientHandler.getRoomID(dataObject.getUserName())).elements();
-        DataObject obj = new DataObject(Command.LOGOUT, "Logout", dataObject.getMessage());        
+        DataObject obj = new DataObject(CommandType.LOGOUT, "Logout", dataObject.getMessage());        
         while(e.hasMoreElements())
         {
             Client buddy = (Client)e.nextElement();

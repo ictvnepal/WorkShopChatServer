@@ -6,6 +6,14 @@
 
 package pchat.commands;
 
+import java.net.Socket;
+import java.util.Enumeration;
+import pchat.client.Client;
+import pchat.client.ClientHandler;
+import pchat.data.object.CommandType;
+import pchat.data.object.DataObject;
+import pchat.handler.Responder;
+
 /**
  *
  * @author Shaw Nam
@@ -18,7 +26,7 @@ public class MessageCommand extends AbstractCommand {
         while(e.hasMoreElements())
         {
             Client buddy = (Client)e.nextElement();
-            DataObject obj=new DataObject(Command.MESSAGE,dataObject.getMessage(),dataObject.getUserName());
+            DataObject obj=new DataObject(CommandType.MESSAGE,dataObject.getMessage(),dataObject.getUserName());
             responder.writeObject(buddy.getClient(), obj);
         }
     }
