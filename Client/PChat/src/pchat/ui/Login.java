@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 
-package com.view;
+package pchat.ui;
 
 import java.awt.GridLayout;
 import javax.swing.*;
-import com.lang.English;
+import pchat.lang.English;
 
 /**
  *

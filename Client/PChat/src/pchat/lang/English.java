@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.lang;
+package pchat.lang;
 
 /**
  *
@@ -12,7 +12,8 @@ package com.lang;
  */
 public class English {
     
-public final static String MAIN_WINDOW_TITLE = "Login window" ;
-public final static String LOGIN_BUTTON = "Login" ;
+   public final static String SERVER_TITLE = "Server Connect" ;
+   public final static String MAIN_WINDOW_TITLE = "Login window" ;
+   public final static String LOGIN_BUTTON = "Login" ;
 
 }
