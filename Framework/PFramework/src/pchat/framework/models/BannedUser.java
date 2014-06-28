@@ -6,6 +6,7 @@
 
 package pchat.framework.models;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
@@ -71,7 +72,7 @@ public class BannedUser {
         db.addParameters(4, new Param(Type.TimeStamp,new java.sql.Timestamp(today.getTime())));
         db.execute(sql);
         db.close();
-        }catch(Exception ex)
+        }catch(ClassNotFoundException | IOException | SQLException ex)
         {
             System.out.println(ex.getMessage());
         }
@@ -92,7 +93,7 @@ public class BannedUser {
             }
             db.close();
 
-        }catch(Exception ex)
+        }catch(ClassNotFoundException | IOException | SQLException ex)
         {
             System.out.println(ex.getMessage());
         }

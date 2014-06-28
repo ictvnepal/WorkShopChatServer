@@ -14,5 +14,6 @@ public enum Type {
     Integer,
     String,
     Double,
-    TimeStamp
+    TimeStamp,
+    Boolean
 }
