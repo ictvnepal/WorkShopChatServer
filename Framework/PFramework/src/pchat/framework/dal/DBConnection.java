@@ -46,7 +46,7 @@ public class DBConnection {
     public void open() throws IOException, SQLException
     {
         Properties properties=new Properties();
-        properties.load(new FileInputStream(new File("database.properties")));
+        properties.load(new FileInputStream(new File("config.properties")));
         String url=properties.getProperty("URL");
         String user=properties.getProperty("USER_NAME");
         String password=properties.getProperty("PASSWORD");
