@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package handler;
+package pchat.handler;
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -19,7 +19,7 @@ import pchat.data.object.DataObject;
  * @author Sun-J
  */
  public class Responder extends Thread {
-   private Vector requestQueue = new Vector();
+   private Vector<DataQueue> requestQueue = new Vector<DataQueue>();
 
     public synchronized void writeObject(Socket client, DataObject data) {
         try {
@@ -39,7 +39,7 @@ import pchat.data.object.DataObject;
 
     public synchronized DataQueue getMessegeFromQueue()
             throws InterruptedException {
-        while (requestQueue.size() == 0) {
+        while (requestQueue.isEmpty()) {
             wait();
         }
         DataQueue dataQueue = (DataQueue) requestQueue.get(0);

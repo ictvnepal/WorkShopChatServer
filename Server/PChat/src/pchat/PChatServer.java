@@ -9,7 +9,11 @@ package pchat;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.Properties;
+import pchat.handler.ClientListener;
+import pchat.handler.Responder;
+
 
 
 /**
@@ -33,7 +37,15 @@ public class PChatServer {
 
             ServerSocket server=new ServerSocket(Integer.parseInt(port));
             System.out.println("Server is Runnint at :" + port);
-            
+            Responder responder=new Responder();
+            responder.start();
+            while(true)
+            {
+                Socket client=server.accept();
+                System.out.println("Got Connection request from " +client);
+                ClientListener clientListener=new ClientListener(client,responder);
+                clientListener.start();
+            }
             
         
         } catch (IOException ex) {
