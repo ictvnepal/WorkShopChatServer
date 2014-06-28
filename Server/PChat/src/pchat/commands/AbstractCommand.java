@@ -10,8 +10,10 @@ package pchat.commands;
  *
  * @author forsell
  */
-public abstract class AbstractCommand {
+public abstract class AbstractCommand 
+{
     
  public abstract void executeCommand();
  
 }
+
