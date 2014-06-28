@@ -6,10 +6,16 @@
 
 package pchat;
 
+
+
+
+
 /**
  *
  * @author forsell
  */
+
+
 public class PChat {
 
     /**
@@ -17,6 +23,9 @@ public class PChat {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        
+        
     }
     
 }
