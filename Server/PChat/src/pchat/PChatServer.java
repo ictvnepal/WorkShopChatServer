@@ -16,7 +16,7 @@ package pchat;
  */
 
 
-public class PChat {
+public class PChatServer {
 
     /**
      * @param args the command line arguments
@@ -24,7 +24,7 @@ public class PChat {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        
+        System.out.println("hello");
         
     }
     
