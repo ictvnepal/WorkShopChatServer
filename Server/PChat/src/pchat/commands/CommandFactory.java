@@ -19,7 +19,7 @@ public class CommandFactory {
     private static Hashtable initialize()
     {
        Hashtable commandTable=new Hashtable();
-       commandTable.put(CommandType.LOGIN,new LoginCommand());
+       /*commandTable.put(CommandType.LOGIN,new LoginCommand());
        commandTable.put(CommandType.GET_ROOM_IMAGE,new GetRoomImageCommand());
        commandTable.put(CommandType.GET_AVATAR_IMAGE,new GetAvatarImageCommand());
        commandTable.put(CommandType.MOVEAVATAR,new MoveAvatarCommand());
@@ -32,7 +32,7 @@ public class CommandFactory {
        commandTable.put(CommandType.LOGOUT,new LogoutCommand());
        commandTable.put(CommandType.CHANGE_AVATAR,new ChangeAvatarCommand());
        commandTable.put(CommandType.AWAY,new AwayCommand());
-       commandTable.put(CommandType.PRIVATE_MESSAGE, new PrivateMessageCommand());
+       commandTable.put(CommandType.PRIVATE_MESSAGE, new PrivateMessageCommand());*/
        return commandTable;
     }
     

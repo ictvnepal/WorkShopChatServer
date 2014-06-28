@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package handler;
+package pchat.handler;
 
 import java.net.Socket;
 import pchat.data.object.DataObject;

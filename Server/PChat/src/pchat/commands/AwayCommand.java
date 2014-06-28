@@ -6,7 +6,7 @@
 
 package pchat.commands;
 
-import handler.Responder;
+import pchat.handler.Responder;
 import java.net.Socket;
 import java.util.Enumeration;
 import pchat.client.Client;
