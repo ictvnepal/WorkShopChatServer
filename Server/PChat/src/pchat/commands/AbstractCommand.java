@@ -14,8 +14,10 @@ import pchat.data.object.DataObject;
  *
  * @author forsell
  */
-public abstract class AbstractCommand {
+public abstract class AbstractCommand 
+{
     
  public abstract void executeCommand(Responder responder,DataObject dataObject,Socket client);
  
 }
+
