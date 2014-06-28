@@ -6,6 +6,8 @@
 
 package pchat.commands;
 
+import java.net.Socket;
+
 /**
  *
  * @author Shaw Nam
