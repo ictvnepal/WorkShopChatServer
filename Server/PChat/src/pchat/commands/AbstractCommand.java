@@ -4,19 +4,14 @@
  * and open the template in the editor.
  */
 
-package pchat;
+package pchat.commands;
 
 /**
  *
  * @author forsell
  */
-public class PChat {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public abstract class AbstractCommand {
     
+ public abstract void executeCommand();
+ 
 }
