@@ -7,6 +7,7 @@
 package pchat.framework.models;
 
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import pchat.framework.dal.DBConnection;
@@ -64,7 +65,7 @@ public class Avatar {
         db.addParameters(1,new Param(Type.String,getAvatarImage()));
         db.execute(sql);
         db.close();
-        }catch(Exception ex)
+        }catch(ClassNotFoundException | IOException | SQLException ex)
         {
             System.out.println(ex.getMessage());
         }
@@ -85,7 +86,7 @@ public class Avatar {
             }
             db.close();
 
-        }catch(Exception ex)
+        }catch(ClassNotFoundException | IOException | SQLException ex)
         {
             System.out.println(ex.getMessage());
         }

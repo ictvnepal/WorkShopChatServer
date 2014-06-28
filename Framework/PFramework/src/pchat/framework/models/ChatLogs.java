@@ -6,6 +6,7 @@
 
 package pchat.framework.models;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
@@ -94,7 +95,7 @@ public class ChatLogs {
     }
 
     /**
-     * @param login_date the login_date to set
+     * @param loginDate the login_date to set
      */
     public void setLoginDate(Date loginDate) {
         this.loginDate = loginDate;
@@ -159,7 +160,7 @@ public class ChatLogs {
         db.addParameters(7, new Param(Type.TimeStamp,new java.sql.Timestamp(today.getTime())));
         db.execute(sql);
         db.close();
-        }catch(Exception ex)
+        }catch(ClassNotFoundException | IOException | SQLException ex)
         {
             System.out.println(ex.getMessage());
         }
@@ -180,7 +181,7 @@ public class ChatLogs {
             }
             db.close();
 
-        }catch(Exception ex)
+        }catch(ClassNotFoundException | IOException | SQLException ex)
         {
             System.out.println(ex.getMessage());
         }
