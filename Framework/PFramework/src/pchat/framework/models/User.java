@@ -142,11 +142,11 @@ public class User {
         }
     }
 
-    public static UserList getAll()
+    public static UserList getAll() throws Exception
     {
         UserList userList=new UserList();
         String sql="SELECT * from users";
-        try{
+        
             DBConnection db=new DBConnection();
             db.open();
 
@@ -157,10 +157,7 @@ public class User {
             }
             db.close();
 
-        }catch(Exception ex)
-        {
-            System.out.println(ex.getMessage());
-        }
+        
         return userList;
     }
 

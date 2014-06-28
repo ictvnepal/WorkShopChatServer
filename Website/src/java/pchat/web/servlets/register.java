@@ -73,11 +73,19 @@ public class register extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
      //   processRequest(request, response);
+        try{
         User user= new User();
         user.setUserName(request.getParameter("username"));
         user.setPassword(request.getParameter("password"));
         user.setEmail(request.getParameter("email"));
+        user.setStatus(1);
         user.save();
+        response.sendRedirect("thankyou.jsp");
+        }catch(Exception ex)
+        {
+            PrintWriter out = response.getWriter();
+            out.println(ex.getMessage());
+        }
     }
 
     /**
