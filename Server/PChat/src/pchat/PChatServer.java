@@ -12,10 +12,6 @@ import java.net.ServerSocket;
 import java.util.Properties;
 
 
-
-
-
-
 /**
  *
  * @author forsell
@@ -37,6 +33,8 @@ public class PChatServer {
 
             ServerSocket server=new ServerSocket(Integer.parseInt(port));
             System.out.println("Server is Runnint at :" + port);
+            
+            
         
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
