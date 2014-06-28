@@ -5,7 +5,7 @@
  */
 
 package pchat;
-
+import pchat.ui.Con_to_server;
 /**
  *
  * @author forsell
@@ -17,6 +17,9 @@ public class PChat {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+  		new Con_to_server();
+
     }
     
 }
