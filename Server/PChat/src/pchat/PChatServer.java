@@ -6,6 +6,12 @@
 
 package pchat;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.util.Properties;
+
+
 
 
 
@@ -22,9 +28,19 @@ public class PChatServer {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        try {
+            // TODO code application logic here
+            
+            Properties configFile=new Properties();
+            configFile.load(new FileInputStream("config.properties"));
+            String port=configFile.getProperty("PORT");
+
+            ServerSocket server=new ServerSocket(Integer.parseInt(port));
+            System.out.println("Server is Runnint at :" + port);
         
-        System.out.println("hello");
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
         
     }
     
