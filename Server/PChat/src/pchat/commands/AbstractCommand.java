@@ -6,6 +6,10 @@
 
 package pchat.commands;
 
+import handler.Responder;
+import java.net.Socket;
+import pchat.data.object.DataObject;
+
 /**
  *
  * @author forsell
@@ -13,7 +17,7 @@ package pchat.commands;
 public abstract class AbstractCommand 
 {
     
- public abstract void executeCommand();
+ public abstract void executeCommand(Responder responder,DataObject dataObject,Socket client);
  
 }
 
