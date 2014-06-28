@@ -10,11 +10,12 @@ package pchat.framework.models;
  *
  * @author forsell
  */
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Date;
 import pchat.framework.dal.DBConnection;
 import pchat.framework.dal.Param;
 import pchat.framework.dal.Type;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 /**
  *
@@ -26,6 +27,7 @@ public class User {
     private String userName;
     private String email;
     private String password;
+    private Date joined_date;
     private int status;
 
     public User() {
@@ -95,6 +97,16 @@ public class User {
         this.password = password;
     }
 
+    public Date getJoined_date() {
+        return joined_date;
+    }
+
+    public void setJoined_date(Date joined_date) {
+        this.joined_date = joined_date;
+    }
+    
+    
+    
     /**
      * @return the status
      */
@@ -111,7 +123,7 @@ public class User {
 
     public void save()
     {
-        String sql="Insert into users(username,email,password,created_date,status) values(?,?,?,?,?)";
+        String sql="Insert into users(username,email,password,joined_date,status) values(?,?,?,?,?)";
         try{
         DBConnection db=new DBConnection();
         db.open();
@@ -159,6 +171,7 @@ public class User {
         user.setUserName(rs.getString("username"));
         user.setEmail(rs.getString("email"));
         user.setPassword(rs.getString("password"));
+        user.setJoined_date(rs.getDate("joined_date"));
         user.setStatus((Integer)rs.getInt("status"));
         return user;
     }
